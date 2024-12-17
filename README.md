@@ -17,8 +17,18 @@ Drop the files and contents from
 - [lib](lib) (from [CircuitPython Libraries Bundle](https://circuitpython.org/libraries))
 - [code.py](code.py)
   
-on to your device.
-The LED should start blinking every 30 second, indicating your device is running (and doing mouse-moves 😁).
+on your device. The files and directories should look like this:  
+````
+code.py
+lib/
+    adafruit_hid/
+        __init__.mpy
+        consumer_control.mpy
+        ...
+        keycode.mpy
+        mouse.mpy
+````
+The LED should start blinking every 30 second, indicating your device is running (and doing little mouse-moves 😁).
 ### 4. (Optional) Disable Pico from showing up as a mass-storage-device
 ⚠️ THIS WILL MAKE YOUR PICO READ-ONLY!  
 
