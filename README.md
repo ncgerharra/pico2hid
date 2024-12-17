@@ -61,7 +61,7 @@ In order to make any further change, we will need to wipe the contents from devi
 - Your Pico will start up as "RP2350" with the 2 files (like at the start), again.
 - Drop the [nuke](firmwares/universal_flash_nuke.uf2) firmware on it
 - Unplug Device
-- Start from [beginning...](#connect-fresh-pico-2-via-usb)
+- Start from [beginning...](#1-connect-fresh-pico-2-via-usb)
 
 ## Improvements
 How about making use of the bluetooth stack, included in Pico 2 W, for acting like a bluetooth-device?
