@@ -4,8 +4,10 @@ Use a Raspberry Pico 2 W as a USB mouse-device (aka "Jiggler")
 ## HowTo install
 ### 1. Connect fresh Pico 2 via USB
 Your Pico 2 will show up as "RP2350" device with 2 read-only files
-- INDEX.HTM
-- INFO_UF2.TXT
+```
+INDEX.HTM
+INFO_UF2.TXT
+```
 ### 2. Install CircuitPython
 Drop the UF2-CircuitPython [Firmware](firmwares/adafruit-circuitpython-raspberry_pi_pico2_w-de_DE-9.2.1.uf2), 
 or [download](https://circuitpython.org/board/raspberry_pi_pico2_w/) a newer one, 
@@ -35,7 +37,19 @@ The LED should start blinking every 30 second, indicating your device is running
 Drop the file
 - [boot.py](boot.py)
 
-on to your device. You will need to unplug and reinsert the device.  
+on your device:
+````
+boot.py
+code.py
+lib/
+    adafruit_hid/
+        __init__.mpy
+        consumer_control.mpy
+        ...
+        keycode.mpy
+        mouse.mpy
+````
+You will need to unplug and reinsert the device.  
 Your Pico 2 is now acting like a mouse device (Jiggler).
 
 As the device is no mass-storage-device any longer, for making any further change to it, you will need to reset the firmware and start from beginning:
