@@ -1,5 +1,6 @@
+Use a Raspberry Pico 2 W as a USB mouse-device (aka "Jiggler")  
+*(..or probably [any other Microcontroller](https://circuitpython.org/downloads), as long as it [supports](https://docs.circuitpython.org/en/latest/shared-bindings/usb_hid/) the ```usb-hid``` module)*
 # pico2hid
-Use a Raspberry Pico 2 W as a USB mouse-device (aka "Jiggler")
 
 ## HowTo install
 ### 1. Connect fresh Pico 2 via USB
@@ -49,15 +50,17 @@ lib/
         keycode.mpy
         mouse.mpy
 ````
-You will need to unplug and reinsert the device.  
-Your Pico 2 is now acting like a mouse device (Jiggler).
+You will need to unplug and reinsert the device.    
+Your Pico 2 is now acting like a mouse device (Jiggler).  
+
+⚠️ *If your device does not survive reboots but instead keeps on blinking for 2 times in a row, you will need re-plug the Pico on every reboot* 😕.
 
 As the device is no mass-storage-device any longer, for making any further change to it, you will need to reset the firmware and start from beginning:
 
 ### 5. Reset firmware
-In order to make any further change, we will need to wipe the contents from device, and make it writable, again. 
+The Pico 2 W does not have the RESET-pin connected to an onboard button. In order to make any further change, we will need to wipe the contents from device via the nuke firmware, and make it writable, again. 
 - Unplug Device
-- Press AND HOLD the "Bootsel"-Button on the device and reinsert it. (Then release, of course).
+- Press AND HOLD the ```Bootsel```-Button on the device and reinsert it (then release, of course).
 - Your Pico will start up as "RP2350" with the 2 files (like at the start), again.
 - Drop the [nuke](firmwares/universal_flash_nuke.uf2) firmware on it
 - Unplug Device
