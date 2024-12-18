@@ -1,6 +1,6 @@
+# pico2hid
 Use a Raspberry Pico 2 W as a USB mouse-device (aka "Jiggler")  
 *(..or probably [any other Microcontroller](https://circuitpython.org/downloads), as long as it [supports](https://docs.circuitpython.org/en/latest/shared-bindings/usb_hid/) the ```usb-hid``` module)*
-# pico2hid
 
 ## HowTo install
 ### 1. Connect fresh Pico 2 via USB
